@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Navigation from "./components/Navigation/Navigation";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
+import Articles from "./pages/Articles";
 
 function AnimatedRouter() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function AnimatedRouter() {
           <Route path="/" element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="articles" element={<Articles />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

@@ -51,16 +51,20 @@ function Projects() {
         <h3 key={repo.language}>{repo.language}</h3>
       </div>
       <div className="repo__card--buttons">
-        <button type="button">
-          <a
-            href={repo.homepage}
-            target="_blank"
-            key={repo.homepage}
-            rel="noreferrer"
-          >
-            Live Demo
-          </a>
-        </button>
+        {repo.homepage ? (
+          <button type="button">
+            <a
+              href={repo.homepage}
+              target="_blank"
+              key={repo.homepage}
+              rel="noreferrer"
+            >
+              Live Demo
+            </a>
+          </button>
+        ) : (
+          ""
+        )}
         <button type="button">
           <a
             href={repo.html_url}
@@ -74,7 +78,12 @@ function Projects() {
       </div>
     </div>
   ));
-  return <div className="repo">{listedRepos}</div>;
+  return (
+    <>
+      <h1 className="h-green">Repositories</h1>
+      <div className="repo">{listedRepos}</div>
+    </>
+  );
 }
 
 export default Projects;

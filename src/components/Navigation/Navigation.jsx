@@ -40,6 +40,9 @@ function Navigation() {
         <NavLink onClick={toggleX} path="projects" to="/projects">
           Projects
         </NavLink>
+        <NavLink onClick={toggleX} path="articles" to="/articles">
+          Articles
+        </NavLink>
         <a href="mailto:banev_dimitar@mail.com">Contact</a>
         <a
           href="https://devastion.net/downloads/resume-en.pdf"

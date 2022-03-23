@@ -32,7 +32,9 @@
   },
   "homepage": "https://github.com/devastion/parcel-start-react#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.3.2",
     "@parcel/transformer-sass": "^2.3.2",
+    "@parcel/transformer-webmanifest": "^2.3.2",
     "autoprefixer": "^10.4.4",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",

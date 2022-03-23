@@ -6,18 +6,25 @@
   @media (min-width: 768px) {
     flex-flow: row wrap;
     justify-content: center;
+  }
+
+  @media (min-width: 1200px) {
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: flex-start;
   }
 
   &__card {
     width: 345px;
-
     background-color: #1d2433;
     margin: 20px auto;
     border: 1px solid #2f3b54;
     font-family: "Fira Code", monospace;
     border-radius: 5px;
-    box-shadow: 3px 3px #ef6b73;
+    box-shadow: 3px 3px var(--main-color);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 
     h1 {
       font-size: 1.25rem;
@@ -38,6 +45,12 @@
       padding: 10px 15px;
     }
 
+    h3 {
+      font-weight: 600;
+      color: var(--main-color);
+      padding: 0 15px;
+    }
+
     button {
       width: 140px;
       height: 40px;
@@ -48,8 +61,37 @@
     }
 
     a {
-      color: #ef6b73;
+      color: var(--main-color);
       font-weight: 600;
     }
+
+    @media (min-width: 768px) {
+      height: 280px;
+    }
+
+    &--buttons {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+}
+
+.red {
+  --main-color: #ef6b73;
+}
+
+.purple {
+  --main-color: #c3a6ff;
+}
+
+.blue {
+  --main-color: #5ccfe6;
+}
+
+.green {
+  --main-color: #bae67e;
+}
+
+.grey {
+  --main-color: #a2aabc;
 }

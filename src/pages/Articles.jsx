@@ -25,7 +25,9 @@ export default function Articles() {
           <img src={heart} alt="heart" />
           {article.positive_reactions_count}
         </h4>
-        <a href={article.url}>Read Full Article</a>
+        <a href={article.url} target="_blank" rel="noreferrer">
+          Read Full Article
+        </a>
       </div>
     </div>
   ));

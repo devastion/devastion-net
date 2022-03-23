@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is my personal parcel starter plate. Just clone the repository, npm install and start coding!",
   "scripts": {
-    "start": "npm run clean && parcel src/index.html --port 3000",
+    "start": "npm run clean && parcel src/index.html --port 3000 --open 'google-chrome'",
     "build": "npm run clean && parcel build src/index.html --public-url https://devastion.net",
     "clean": "rimraf ./dist && rimraf ./.parcel-cache",
     "csslint": "stylelint \"./src/**/*.scss\"",

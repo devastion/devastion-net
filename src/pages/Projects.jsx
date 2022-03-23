@@ -48,6 +48,7 @@ function Projects() {
           {repo.name}
         </h1>
         <h2 key={repo.description}>{repo.description}</h2>
+
         <h3 key={repo.language}>{repo.language}</h3>
       </div>
       <div className="repo__card--buttons">

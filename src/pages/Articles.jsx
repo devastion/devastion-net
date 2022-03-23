@@ -18,8 +18,16 @@ export default function Articles() {
 
   const listedArticles = articles.map((article) => (
     <div className="articles__article">
-      <h2>{article.title}</h2>
-      <h3>{article.description}</h3>
+      <h2>
+        <a href={article.url} target="_blank" rel="noreferrer">
+          {article.title}
+        </a>
+      </h2>
+      <h3>
+        <a href={article.url} target="_blank" rel="noreferrer">
+          {article.description}
+        </a>
+      </h3>
       <div className="articles__article--footer">
         <h4>
           <img src={heart} alt="heart" />

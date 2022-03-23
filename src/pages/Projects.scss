@@ -1,0 +1,55 @@
+.repo {
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column wrap;
+
+  @media (min-width: 768px) {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__card {
+    width: 345px;
+
+    background-color: #1d2433;
+    margin: 20px auto;
+    border: 1px solid #2f3b54;
+    font-family: "Fira Code", monospace;
+    border-radius: 5px;
+    box-shadow: 3px 3px #ef6b73;
+
+    h1 {
+      font-size: 1.25rem;
+      color: #e5e5e5;
+      padding: 0 15px 10px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      margin-top: 10px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    h2 {
+      color: #d7dce2;
+      padding: 10px 15px;
+    }
+
+    button {
+      width: 140px;
+      height: 40px;
+      background-color: #2f3b54;
+      margin: 10px;
+      border: 1px solid #1d2433;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #ef6b73;
+      font-weight: 600;
+    }
+  }
+}

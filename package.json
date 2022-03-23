@@ -1,0 +1,61 @@
+{
+  "name": "parcel-start-react",
+  "version": "1.0.0",
+  "description": "This is my personal parcel starter plate. Just clone the repository, npm install and start coding!",
+  "scripts": {
+    "start": "npm run clean && parcel src/index.html --port 3000",
+    "build": "npm run clean && parcel build src/index.html --public-url https://devastion.net",
+    "clean": "rimraf ./dist && rimraf ./.parcel-cache",
+    "csslint": "stylelint \"./src/**/*.scss\"",
+    "csslint:fix": "stylelint \"./src/**/*.scss\" --fix",
+    "eslint": "eslint \"./src/*[.js,.jsx]\"",
+    "eslint:fix": "eslint --fix \"./src/*[.js,.jsx]\"",
+    "prettier": "prettier --write src/",
+    "scss-folders": "rm -rf \"./src/*\" && cp -a \"./scss-architecture/.\" \"./src/\" && rimraf \"./scss-architecture\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devastion/parcel-start-react.git"
+  },
+  "keywords": [
+    "Parcel",
+    "React",
+    "SCSS",
+    "ESLint",
+    "Stylelint",
+    "Prettier"
+  ],
+  "author": "Dimitar Banev <banev_dimitar@mail.com> (https://devastion.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devastion/parcel-start-react/issues"
+  },
+  "homepage": "https://github.com/devastion/parcel-start-react#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "parcel": "^2.3.2",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.6.0",
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.6.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.2.0"
+  },
+  "dependencies": {
+    "hamburger-react": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2",
+    "react-transition-group": "^4.4.2",
+    "sass-reset": "^1.0.4"
+  }
+}

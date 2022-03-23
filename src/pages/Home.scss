@@ -1,0 +1,146 @@
+.home {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #d7dce2;
+
+    span {
+      color: #bae67e;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    color: #a2aabc;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 20px 0;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .button {
+    --border-radius: 0;
+    --border-size: 0.125rem;
+    --border-bg: conic-gradient(#bae67e, #ef6b73, #bae67e);
+    --padding: 0;
+
+    @keyframes spin {
+      from {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    width: 335px;
+    height: 60px;
+    // background-color: #1d2433;
+    // border: 1px solid #2f3b54;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: calc(var(--padding) + var(--border-size));
+    border-radius: var(--border-radius);
+    display: inline-block;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      display: block;
+      background: var(--border-bg);
+      width: calc(100% * 1.41421356237);
+      padding-bottom: calc(100% * 1.41421356237);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: -2;
+      animation: spin 5s linear infinite;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: var(--border-size);
+      background: #1d2433;
+      z-index: -1;
+      border-radius: calc(var(--border-radius) - var(--border-size));
+    }
+
+    a {
+      font-family: "Fira Code", monospace;
+      color: #d7dce2;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      span {
+        color: #ef6b73;
+      }
+
+      &:hover {
+        span {
+          color: #bae67e;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 420px;
+      a {
+        padding: 10px 50px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 860px;
+    margin: auto;
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from {
+        border-color: transparent;
+      }
+      to {
+        border-color: #a2aabc;
+      }
+    }
+
+    .typed-out {
+      overflow: hidden;
+      border-right: 3px solid #a2aabc;
+      padding-right: 10px;
+      white-space: nowrap;
+      width: 0;
+      animation: typing 3s steps(36, end) forwards, blink 0.8s infinite;
+      animation-delay: 0.1s;
+    }
+  }
+}

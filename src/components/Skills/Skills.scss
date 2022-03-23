@@ -1,0 +1,28 @@
+.skills {
+  ul {
+    list-style: none;
+    margin: 20px 0 40px;
+
+    li {
+      font-family: "Fira Code", monospace;
+      line-height: 36px;
+      vertical-align: middle;
+      font-size: 1.375rem;
+      color: #e5e5e5;
+    }
+
+    li::before {
+      content: url("../../images/arrow.png");
+      display: inline-block;
+      vertical-align: -5px;
+      margin-right: 5px;
+    }
+  }
+
+  h1 {
+    font-size: 1.625rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ef6b73;
+  }
+}

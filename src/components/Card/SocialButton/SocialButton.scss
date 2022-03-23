@@ -1,0 +1,61 @@
+.social-btn {
+  width: 225px;
+  height: 60px;
+  background-color: #1d2433;
+  font-size: 1.5rem;
+  color: #a2aabc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #2f3b54;
+  border-radius: 5px;
+  box-shadow: 3px 3px var(--color-box);
+  margin-bottom: 20px;
+  img {
+    width: 36px;
+    height: 36px;
+    filter: invert(19%) sepia(13%) saturate(1668%) hue-rotate(182deg)
+      brightness(99%) contrast(89%);
+    margin-left: 10px;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 15px;
+  }
+
+  &:hover {
+    img {
+      filter: var(--filter-color);
+    }
+
+    a {
+      color: var(--color-box);
+    }
+  }
+}
+
+.blue {
+  --color-box: #5ccfe6;
+  --filter-color: invert(80%) sepia(31%) saturate(909%) hue-rotate(154deg)
+    brightness(91%) contrast(98%);
+}
+
+.green {
+  --color-box: #bae67e;
+  --filter-color: invert(94%) sepia(9%) saturate(1898%) hue-rotate(28deg)
+    brightness(95%) contrast(89%);
+}
+
+.red {
+  --color-box: #ef6b73;
+  --filter-color: invert(59%) sepia(73%) saturate(4047%) hue-rotate(321deg)
+    brightness(108%) contrast(87%);
+}
+
+.yellow {
+  --color-box: #ffae57;
+  --filter-color: invert(84%) sepia(41%) saturate(1120%) hue-rotate(317deg)
+    brightness(101%) contrast(101%);
+}

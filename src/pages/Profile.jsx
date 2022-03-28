@@ -57,9 +57,9 @@ export default function Profile() {
         <Projects />
       </div>
 
-      <div className="profile__articles">
+      {/* <div className="profile__articles">
         <Articles />
-      </div>
+      </div> */}
     </div>
   );
 }

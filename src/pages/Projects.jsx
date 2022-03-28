@@ -5,7 +5,6 @@ import folder from "../images/folder-v2.png";
 function Projects() {
   const url = "https://api.github.com/users/devastion/repos";
   const [repos, setRepos] = useState([]);
-  const [langs, setLangs] = useState([]);
 
   const reposFetch = async (link, setArray) => {
     const res = await fetch(link);
@@ -53,29 +52,40 @@ function Projects() {
       </div>
       <div className="repo__card--buttons">
         {repo.homepage ? (
+          <>
+            <button type="button">
+              <a
+                href={repo.homepage}
+                target="_blank"
+                key={repo.homepage}
+                rel="noreferrer"
+              >
+                Live Demo
+              </a>
+            </button>
+            <button type="button">
+              <a
+                href={repo.html_url}
+                target="_blank"
+                key={repo.html_url}
+                rel="noreferrer"
+              >
+                GitHub Repo
+              </a>
+            </button>
+          </>
+        ) : (
           <button type="button">
             <a
-              href={repo.homepage}
+              href={repo.html_url}
               target="_blank"
-              key={repo.homepage}
+              key={repo.html_url}
               rel="noreferrer"
             >
-              Live Demo
+              GitHub Repo
             </a>
           </button>
-        ) : (
-          ""
         )}
-        <button type="button">
-          <a
-            href={repo.html_url}
-            target="_blank"
-            key={repo.html_url}
-            rel="noreferrer"
-          >
-            GitHub Repo
-          </a>
-        </button>
       </div>
     </div>
   ));
